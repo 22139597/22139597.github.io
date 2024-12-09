@@ -1,0 +1,180 @@
+<html>
+<title>Acessories</title>
+<h4 align="left"> <a href="Contact.htm"><img src="images/logo.png" width="500" height="250"
+<h4 align="center"> <a href="index.htm"><img src="images/banner.png" alt="banner" width="800" height="100" style="border: #000000 6px outset "; align="center" </a>
+</head>
+<body>
+
+   
+
+</html>
+<style>
+a:link {color: #000000;}
+a:visited {color: #3b3b3b;}
+a:hover {color: #FFC0CB;}
+body {font-family: Arial, Helvetica, sans-serif;
+background-color: #fbfbfb;
+h1 {color: #44763E;}
+p {color: #161716;}
+h3 {color: #FF0000 ;}
+.navigation {
+display: flex;
+justify-content: space-around;
+padding: 10px;
+background-color: grey;
+}
+</style>
+
+<div class="navigation">
+<a href="apple.htm"> Apple</a> :
+<a href="samsung.htm"> Samsung</a> :
+<a href="huawei.htm"> Huawei</a> :
+<a href="google.htm"> Google</a> :
+<a href="accessories.htm">Accessories</a> :
+<a href="services.htm">Services</a> :
+<a href="Contact.htm">Contact Us</a> :
+</div>
+
+</head>
+<body>
+  <style>
+    .carousel-container {
+      position: relative;
+      width: 60%;
+      margin: 20px auto;
+      overflow: hidden;
+      border: 2px solid #ccc; 
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 50%; 
+      height: 50%;
+    }
+
+    .left-arrow, .right-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10; /
+    }
+
+    .left-arrow {
+      left: 10px;
+    }
+
+    .right-arrow {
+      right: 10px;
+    }
+	 .find-out-more {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+	.footer {
+            background-color: #666666;
+            padding: 20px;
+            text-align: center;
+        }
+        
+
+  </style>
+</head>
+<body>
+<h4 align="center" <h2>Apple Acessories
+  <div class="carousel-container" id="carousel">
+    <button class="left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="carousel-images">
+     <img src="images/appleacessory_airpods4.jpg" alt="Image 1">
+       <img src="images/appleacessory_airpodsmax.jpg" alt="Image 2">
+       <img src="images/appleacessory_pencil.jpg" alt="Image 3" >
+       <img src="images/appleacessory_USB-C.jpg" alt="Image 4">
+      <img src="images/appleacessory_homepod.png" alt="Image 5">
+    </div>
+    <button class="right-arrow" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  </body>
+  <h4 align="center" <h2> Buy these here:
+  <a href="https://www.apple.com/uk/shop/accessories/all" class="find-out-more" target="_blank">Find Out More</a>
+  
+  <h4 align="center" <h2> Android Acessories
+ 
+   <div class="carousel">
+        <div class="carousel-images" id="carousel2Images">
+            <img src="images/androidacessory_charger.jpg" alt="Image 5">
+            <img src="images/androidacessory_gamingcontroller.jpg" width="100" height="100" alt="Image 6">
+            <img src="images/androidacessory_chargingstation.jpg" alt="Image 7">
+            <img src="images/androidacessory_samsungbuds.jpg" alt="Image 8">
+        </div>
+        <button class="arrow left" id="prev2Btn">&#10094;</button>
+        <button class="arrow right" id="next2Btn">&#10095;</button>
+		<h4 align="center" <h2> Buy these here:
+		 <a href="https://www.geekys.co.uk/collections/android-accessories" class="find-out-more" target="_blank">Find Out More</a>
+    </div>
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#carousel .carousel-images img');
+    const totalImages = images.length;
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+
+    
+      if (currentIndex >= totalImages) {
+        currentIndex = 0;
+      }
+
+   
+      if (currentIndex < 0) {
+        currentIndex = totalImages - 1;
+      }
+
+      
+      const imageWidth = images[0].clientWidth;
+      document.querySelector('#carousel .carousel-images').style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+    }
+	 const carousel2Images = document.getElementById('carousel2Images');
+        const prev2Btn = document.getElementById('prev2Btn');
+        const next2Btn = document.getElementById('next2Btn');
+        const totalImages2 = 4;
+        let currentIndex2 = 0;
+
+        function updateCarousel2() {
+            const offset = -currentIndex2 * 400;
+            carousel2Images.style.transform = `translateX(${offset}px)`;
+        }
+
+        prev2Btn.addEventListener('click', () => {
+            currentIndex2 = (currentIndex2 - 1 + totalImages2) % totalImages2;
+            updateCarousel2();
+        });
+
+        next2Btn.addEventListener('click', () => {
+            currentIndex2 = (currentIndex2 + 1) % totalImages2;
+            updateCarousel2();
+        });
+  </script>
+ <div class="footer">
+        <p>Check out these videos:</p>
+		</body><h4 align="center"></iframe></body><h4 align="left"><iframe width="800" height="300" src="https://www.youtube.com/embed/wSsQUyImsRQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border: 1px solid #000000; float: center; margin-right: 50px;"></iframe></iframe></body><h4 align="right"><iframe width="800" height="300" src="https://www.youtube.com/embed/xq7Z5fXpKL8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border: 1px solid #000000; float: center; margin-right: 50px;"></iframe>
+		
+</div>
+ 
+</html>
